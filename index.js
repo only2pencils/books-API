@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 // WILDCARD ROUTE
 app.get("*", (req, res) => {
-  res.send("404 page");
+  res.send("error404");
 });
 
 // Listen to a port number defined by a local environment variable.
