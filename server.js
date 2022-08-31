@@ -6,7 +6,7 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 const app = express();
 
-// ROUTES
+// HOME ROUTE
 app.get("/", (req, res) => {
   res.send("Welcome to an App about Books!");
 });

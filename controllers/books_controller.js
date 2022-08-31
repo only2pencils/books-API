@@ -1,4 +1,4 @@
-const router = require("express").Router;
+// const router = require("express").Router;
 const express = require("express");
 const books = express.Router();
 const Book = require("../models/book.js");
@@ -8,9 +8,13 @@ books.get("/", (req, res) => {
   res.send(Book);
 });
 
+// router.get("/", (req, res) => {
+//   res.send("GET /books");
+// });
+
 // SHOW
 books.get("/:arrayIndex", (req, res) => {
   res.send(Book[req.params.arrayIndex]);
 });
 
-module.exports = router;
+module.exports = books;
