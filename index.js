@@ -5,16 +5,19 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
+
 app.use("/books", require("./controllers/books_controller"));
 
 // HOME PAGE ROUTE
 app.get("/", (req, res) => {
-  res.send(`Reading is FUN!`);
+  res.send(`Home`);
 });
 
 // WILDCARD ROUTE
 app.get("*", (req, res) => {
-  res.status(404).send("<h1>404 Page</h1>");
+  res.send("404 page");
 });
 
 // Listen to a port number defined by a local environment variable.
