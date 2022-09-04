@@ -4,6 +4,7 @@ const express = require("express");
 // CONFIGURATION
 require("dotenv").config();
 const PORT = process.env.PORT;
+// console.log(PORT);
 const app = express();
 
 // MIDDLEWARE
@@ -11,14 +12,14 @@ const app = express();
 // app.set("view engine", "jsx");
 // app.engine("jsx", require("express-react-views").createEngine());
 
-// HOME ROUTE
-app.get("/", (req, res) => {
-  res.send("Welcome to an App about Books!");
-});
+// ROUTES
+// app.get("/", (req, res) => {
+//   res.send("Reading is fundamental!");
+// });
 
 // Books
-const booksController = require("./controllers/books_controller.js");
-app.use("/books", booksController);
+// const booksController = require("./controllers/books_controller.js");
+// app.use("/books", booksController);
 
 // LISTEN
 app.listen(PORT, () => {

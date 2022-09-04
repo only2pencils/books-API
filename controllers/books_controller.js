@@ -49,15 +49,15 @@ books.get("/seed", (req, res) => {
     );
 });
 
-// INDEX PAGE
+INDEX PAGE
 books.get("/", (req, res) => {
-  res.send(Book);
+res.send(Book);
 });
 
-// router.get("/", (req, res) => {
-//   res.send("GET /books");
+router.get("/", (req, res) => {
+  res.send("GET /books");
 
-// });
+});
 
 // SHOW
 books.get("/:arrayIndex", (req, res) => {
